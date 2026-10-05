@@ -5,7 +5,7 @@ and JavaScript.
 
 ## Live Demo
 
-[View Live Demo](YOUR-LIVE-LINK)
+[View Live Demo](https://godwinjijo.github.io/expense-tracker-godwin-kj/)
 
 ## Features
 
