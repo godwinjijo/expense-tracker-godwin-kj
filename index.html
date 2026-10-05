@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <h1>Expense Tracker</h1>
+        <p>Track your income and expenses</p>
+    </header>
+    <main class="container">
+
+        <section class="summary">
+            <!-- Total income card -->
+            <div class="summary-card" style="color: #449C7A;">
+                <h3>Total Income</h3>
+                <p id="total-income">&#8377;4510.00</p>
+            </div>
+            <!-- Total expense card -->
+            <div class="summary-card" style="color: #CC5555;">
+                <h3>Total Expense</h3>
+                <p id="total-expenses">&#8377;7560.00</p>
+            </div>
+            <!-- Balance card -->
+            <div class="summary-card" style="color: #5988C5;">
+                <h3>Balance</h3>
+                <p id="balance">&#8377;158460.00</p>
+            </div>
+        </section>
+
+        <!-- Monthly Expense Summary -->
+        <section class="monthly-summary">
+            <div class="monthly-summary-header">
+                <h3>Monthly Expense Summary</h3>
+                <input
+                    type="month"
+                    id="month-selector"
+                >
+            </div>
+            <div class="monthly-summary-cards">
+                <div class="monthly-card income">
+                    <h4>Monthly Income</h4>
+                    <p id="monthly-income">₹0.00</p>
+                </div>
+                <div class="monthly-card expense">
+                    <h4>Monthly Expenses</h4>
+                    <p id="monthly-expenses">₹0.00</p>
+                </div>
+                <div class="monthly-card balance">
+                    <h4>Monthly Balance</h4>
+                    <p id="monthly-balance">₹0.00</p>
+                </div>
+                <div class="monthly-card count">
+                    <h4>Expense Transactions</h4>
+                    <p id="monthly-expense-count">0</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Transaction Form -->
+        <section class="transaction">
+            <section class="form-section">
+            <h3>Add New Record</h3>
+            <form action="" id="transaction-form">
+
+                <div class="form-group">
+                    <label for="type">Transaction Type</label>
+                    <select id="type" required>
+                        <option value="">Select Type</option>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input
+                        type="number"
+                        id="amount"
+                        placeholder="Enter amount"
+                        min="0.01"
+                        step="0.01"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Food">Food</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Bills">Bills</option>
+                        <option value="Salary">Salary</option>
+                        <option value="Freelance">Freelance</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input
+                        type="text"
+                        id="description"
+                        placeholder="Enter description"
+                        maxlength="50"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="submit-button">
+                    Add
+                </button>
+            </form>
+            </section>
+
+            <section class="filter-side">
+                <section class="filters">
+                    <h3>Transactions</h3>
+                    <div class="filter-container">
+                        <!-- For Type -->
+                        <select id="type-filter">
+                            <option value="all">All Types</option>
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                        <!-- For Category -->
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="Food">Food</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Bills">Bills</option>
+                            <option value="Salary">Salary</option>
+                            <option value="Freelance">Freelance</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Transaction List -->
+                <section class="transaction-setion">
+                    <div id="transaction-list">
+                        <!-- <p id="empty-message">
+                        </p> -->
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

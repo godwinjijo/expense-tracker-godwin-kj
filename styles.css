@@ -1,0 +1,558 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F0F2F5;
+    color: #333841;
+    min-height: 100vh;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+    padding: 30px 20px 10px;
+}
+
+.header > h1 {
+    color: #333841;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.header > p {
+    color: #666666;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+
+/* main container */
+
+.container {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* Summery cards */
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.summary-card {
+    min-height: 100px;
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(51, 56, 65, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.summary-card > h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.summary-card > p {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* Transactions */
+
+.transaction {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* Forms */
+
+.form-section {
+    width: 100%;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(51, 56, 65, 0.12);
+    padding: 20px;
+    background-color: white;
+}
+
+.form-section > h3 {
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+form {
+    background-color: white;
+    text-align: center;
+}
+
+.form-group {
+    font-size: 12px;
+    padding: 6px 0;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 12px;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid #D9DDE3;
+    border-radius: 7px;
+    font-size: 12px;
+    outline: none;
+    background-color: white;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: #5988C5;
+}
+
+/* Add */
+
+#submit-button {
+    width: 100%;
+    height: 38px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #22B63D;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: #1E9F36;
+}
+
+/* Filter */
+
+.filter-side {
+    min-width: 0;
+}
+
+.filters {
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(51, 56, 65, 0.12);
+}
+
+.filters > h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.filter-container {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-container select {
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid #D9DDE3;
+    border-radius: 7px;
+    font-size: 12px;
+    background-color: white;
+    outline: none;
+}
+
+/* Transaction List */
+
+.transaction-setion {
+    margin-top: 15px;
+}
+
+#transaction-list {
+    width: 100%;
+}
+
+#transaction-list > ul {
+    display: grid;
+    grid-template-columns:
+        minmax(80px, 1fr)
+        minmax(90px, 1fr)
+        minmax(100px, 1fr)
+        minmax(120px, 1.5fr)
+        auto
+        auto;
+    gap: 10px;
+    align-items: center;
+    list-style: none;
+    padding: 12px;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    width: 100%;
+    margin: 8px 0;
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(51, 56, 65, 0.08);
+}
+
+#transaction-list > ul > li {
+    padding: 0;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Edit Button */
+
+.edit-button {
+    width: auto;
+    padding: 6px 10px;
+    border: 1px solid #5988C5;
+    border-radius: 6px;
+    background-color: #5988C5;
+    color: white;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #4776B3;
+}
+
+/* Delete Button */
+
+.delete-button {
+    width: auto;
+    padding: 6px 10px;
+    border: 1px solid #CC5555;
+    border-radius: 6px;
+    background-color: #CC5555;
+    color: white;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #B84444;
+}
+
+#empty-message {
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Tablet size */
+
+@media (max-width: 1024px) {
+
+    .container {
+        width: min(900px, calc(100% - 30px));
+    }
+
+    .transaction {
+        grid-template-columns: 260px 1fr;
+        gap: 20px;
+    }
+
+    .summary {
+        gap: 15px;
+    }
+
+    .summary-card {
+        min-height: 90px;
+        padding: 15px;
+    }
+
+    .summary-card > p {
+        font-size: 20px;
+    }
+
+    #transaction-list > ul {
+        grid-template-columns:
+            0.8fr
+            1fr
+            1fr
+            1.2fr
+            auto
+            auto;
+        gap: 6px;
+    }
+
+}
+
+
+/* MOBILE 768px and below */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding-top: 25px;
+    }
+
+    .header > h1 {
+        font-size: 25px;
+    }
+
+    .header > p {
+        font-size: 12px;
+    }
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+
+    /* Summary becomes 1 column */
+
+    .summary {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 20px 0;
+    }
+
+    .summary-card {
+        min-height: 80px;
+    }
+
+
+    /* Form and transactions become vertical */
+
+    .transaction {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-section {
+        width: 100%;
+    }
+
+    /* Filters */
+
+    .filters {
+        padding: 15px;
+    }
+
+    .filter-container {
+        flex-direction: column;
+    }
+
+    .filter-container select {
+        width: 100%;
+        height: 40px;
+    }
+
+    /* Transactions */
+
+    #transaction-list > ul {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+        padding: 15px;
+    }
+
+    #transaction-list > ul > li {
+        font-size: 12px;
+    }
+
+    .edit-button,
+    .delete-button {
+        width: 100%;
+        padding: 8px 5px;
+    }
+}
+
+/* Small Moblies */
+
+@media (max-width: 480px) {
+
+    .header > h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        width: calc(100% - 20px);
+    }
+
+    .summary-card > h3 {
+        font-size: 14px;
+    }
+
+    .summary-card > p {
+        font-size: 19px;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+
+    .filters > h3 {
+        font-size: 16px;
+    }
+
+    /* Transaction becomes card-like */
+
+    #transaction-list > ul {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    #transaction-list > ul > li {
+        font-size: 11px;
+    }
+
+    .edit-button,
+    .delete-button {
+        font-size: 10px;
+    }
+}
+
+/* Monthly summery */
+
+.monthly-summary {
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(51, 56, 65, 0.12);
+}
+
+.monthly-summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.monthly-summary-header h3 {
+    font-size: 17px;
+}
+
+#month-selector {
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #D9DDE3;
+    border-radius: 7px;
+    font-size: 12px;
+    outline: none;
+}
+
+#month-selector:focus {
+    border-color: #5988C5;
+}
+
+.monthly-summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.monthly-card {
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #F8F9FA;
+}
+
+.monthly-card h4 {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.monthly-card p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Card-specific colors */
+
+.monthly-card.income p {
+    color: #449C7A;
+}
+
+.monthly-card.expense p {
+    color: #CC5555;
+}
+
+.monthly-card.balance p {
+    color: #5988C5;
+}
+
+.monthly-card.count p {
+    color: #333841;
+}
+
+/* Tablet Size */
+
+@media (max-width: 1024px) {
+
+    .monthly-summary-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobiles size */
+
+@media (max-width: 768px) {
+
+    .monthly-summary {
+        padding: 15px;
+    }
+
+    .monthly-summary-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    #month-selector {
+        width: 100%;
+    }
+
+    .monthly-summary-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    .monthly-summary-cards {
+        grid-template-columns: 1fr;
+    }
+}
